@@ -1,0 +1,157 @@
+= Transitietechnieken
+
+.Data Product
+[d2,svg,theme=4]
+----
+grid-rows: 4
+grid-columns: 4
+
+horizontal-gap: 160
+vertical-gap: 80
+
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+
+TechnologiesDataSet.class: dataset
+MktConnectivityNode.class: market
+RegisteredResource.class: market
+ResourceCapacity.class: market
+
+1.class: empty
+Terminal.class: grid
+Location.class: enterprise
+2.class: empty
+
+3.class: empty
+EnergyConsumer.class: grid
+4.class: empty
+5.class: empty
+
+6.class: empty
+MarketEvaluationPoint.class: market
+7.class: empty
+8.class: empty
+
+TechnologiesDataSet -> MktConnectivityNode: ""
+MktConnectivityNode -> RegisteredResource: "registered_resource"
+RegisteredResource -> ResourceCapacity: "resource_capacity"
+RegisteredResource -> Location: "location"
+MktConnectivityNode -> Terminal: "terminals"
+EnergyConsumer -> MarketEvaluationPoint: "usage_points"
+Terminal -> EnergyConsumer: "conducting_equipment"
+
+classes: {
+  empty: {
+    label: ""
+    style: {
+      fill: transparent
+      stroke: transparent
+    }
+  }
+  grid: {
+    style: {
+      fill: "#eccfcb"
+      shadow: true
+    }
+  }
+  enterprise: {
+    style: {
+      fill: "#d1e7c2"
+      shadow: true
+    }
+  }
+  market: {
+    style: {
+      fill: "#fffbef"
+      shadow: true
+    }
+  }
+  dataset: {
+    style: {
+      shadow: true
+    }
+  }
+}
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+
+classes: {
+  empty: {
+    label: ""
+    style: {
+      fill: transparent
+      stroke: transparent
+    }
+  }
+  grid: {
+    style: {
+      fill: "#eccfcb"
+      shadow: true
+    }
+  }
+  enterprise: {
+    style: {
+      fill: "#d1e7c2"
+      shadow: true
+    }
+  }
+  market: {
+    style: {
+      fill: "#fffbef"
+      shadow: true
+    }
+  }
+}
+----
+
+== Additional schemas
+
+* xref:schema:attachment$dp_transitietechnieken.json_schema.json[JSON schema]
