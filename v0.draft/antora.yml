@@ -1,6 +1,0 @@
-name: dp-transitietechnieken
-version: v0.draft
-title: Transitietechnieken
-nav:
-- modules/ROOT/nav.adoc
-- modules/schema/nav.adoc
