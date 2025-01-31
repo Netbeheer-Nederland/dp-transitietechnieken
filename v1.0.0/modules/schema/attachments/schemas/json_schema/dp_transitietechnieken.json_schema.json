@@ -1,9 +1,0 @@
-{
-    "$id": "http://data.netbeheernederland.nl/data-product/dp-transitietechnieken",
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "additionalProperties": true,
-    "metamodel_version": "1.7.0",
-    "title": "dp-transitietechnieken",
-    "type": "object",
-    "version": "v1.0.0"
-}
