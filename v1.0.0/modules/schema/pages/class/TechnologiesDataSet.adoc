@@ -1,0 +1,418 @@
+= `TechnologiesDataSet`
+:toclevels: 4
+
+
++++A single instance of a published dataset.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `this:TechnologiesDataSet`
+
+
+
+
+|===
+
+== Class hierarchy
+* *`TechnologiesDataSet`*
+
+
+== Slots
+
+
+
+.Associated classes
+[d2,svg,theme=4]
+----
+vars: {
+  d2-config: {
+    pad: 20
+  }
+}
+TechnologiesDataSet {
+  style {
+    fill: "#cccccc"
+    shadow: true
+  }
+}
+
+
+
+MktConnectivityNode {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+Terminal {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+EnergyConsumer {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+MarketEvaluationPoint {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RegisteredLoad {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+RegisteredDistributedResource {
+  style {
+    fill: "#fffbef"
+    shadow: true
+  }
+}
+
+
+
+
+TechnologiesDataSet -> MktConnectivityNode: mkt_connectivity_nodes
+
+
+TechnologiesDataSet -> Terminal: terminals
+
+
+TechnologiesDataSet -> EnergyConsumer: energy_consumers
+
+
+TechnologiesDataSet -> MarketEvaluationPoint: market_evaluation_points
+
+
+TechnologiesDataSet -> RegisteredLoad: registered_loads
+
+
+TechnologiesDataSet -> RegisteredDistributedResource: registered_distributed_resources
+
+
+legend: "" {
+  style: {
+    fill: transparent
+    stroke: transparent
+  }
+  grid-rows: 3
+  grid-columns: 2
+  grid-gap: 10
+  near: bottom-right
+  iec61968_color: "" {
+    style: {
+      fill: "#d1e7c2"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61968_text: "IEC61968 (Enterprise)" {
+    shape: text
+  }
+  iec61970_color: "" {
+    style: {
+      fill: "#eccfcb"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec61970_text: "IEC61970 (Grid)" {
+    shape: text
+  }
+  iec62325_color: "" {
+    style: {
+      fill: "#fffbef"
+      stroke: black
+      stroke-width: 1
+    }
+    width: 10
+    height: 10
+  }
+  iec62325_text: "IEC62325 (Market)" {
+    shape: text
+  }
+}
+----
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<conforms_to,`conforms_to`>>
+| 1
+| n/a
+| n/a
+
+| <<contact_point,`contact_point`>>
+| 1
+| n/a
+| n/a
+
+| <<identifier,`identifier`>>
+| 1
+| n/a
+| n/a
+
+| <<release_date,`release_date`>>
+| 1
+| n/a
+| n/a
+
+| <<version,`version`>>
+| 1
+| n/a
+| n/a
+
+| <<energy_consumers,`energy_consumers`>>
+| 1..*
+| xref::class/EnergyConsumer.adoc[`EnergyConsumer`]
+| +++All instances of EnergyConsumer-s+++
+
+| <<market_evaluation_points,`market_evaluation_points`>>
+| 1..*
+| xref::class/MarketEvaluationPoint.adoc[`MarketEvaluationPoint`]
+| +++All instances of MarketEvaluationPoint-s+++
+
+| <<mkt_connectivity_nodes,`mkt_connectivity_nodes`>>
+| 1..*
+| xref::class/MktConnectivityNode.adoc[`MktConnectivityNode`]
+| +++All instances of MktConnectivityNode-s+++
+
+| <<registered_distributed_resources,`registered_distributed_resources`>>
+| 1..*
+| xref::class/RegisteredDistributedResource.adoc[`RegisteredDistributedResource`]
+| +++All instances of RegisteredDistributedResource-s+++
+
+| <<registered_loads,`registered_loads`>>
+| 1..*
+| xref::class/RegisteredLoad.adoc[`RegisteredLoad`]
+| +++All instances of RegisteredLoad-s+++
+
+| <<terminals,`terminals`>>
+| 1..*
+| xref::class/Terminal.adoc[`Terminal`]
+| +++All instances of Terminal-s+++
+|===
+
+'''
+
+
+//[discrete]
+[#conforms_to]
+=== `conforms_to`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://purl.org/dc/terms/conformsTo[`dct:conformsTo`]
+| Cardinality
+| 1
+| Type
+| n/a
+
+
+|===
+
+//[discrete]
+[#contact_point]
+=== `contact_point`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://purl.org/dc/terms/contactPoint[`dct:contactPoint`]
+| Cardinality
+| 1
+| Type
+| n/a
+
+
+|===
+
+//[discrete]
+[#energy_consumers]
+=== `energy_consumers`
++++All instances of EnergyConsumer-s+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `this:TechnologiesDataSet.energyConsumers`
+| Cardinality
+| 1..*
+| Type
+| xref::class/EnergyConsumer.adoc[`EnergyConsumer`]
+
+
+|===
+
+//[discrete]
+[#identifier]
+=== `identifier`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://purl.org/dc/terms/identifier[`dct:identifier`]
+| Cardinality
+| 1
+| Type
+| n/a
+
+
+|===
+
+//[discrete]
+[#market_evaluation_points]
+=== `market_evaluation_points`
++++All instances of MarketEvaluationPoint-s+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `this:TechnologiesDataSet.marketEvaluationPoints`
+| Cardinality
+| 1..*
+| Type
+| xref::class/MarketEvaluationPoint.adoc[`MarketEvaluationPoint`]
+
+
+|===
+
+//[discrete]
+[#mkt_connectivity_nodes]
+=== `mkt_connectivity_nodes`
++++All instances of MktConnectivityNode-s+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `this:TechnologiesDataSet.mktConnectivityNodes`
+| Cardinality
+| 1..*
+| Type
+| xref::class/MktConnectivityNode.adoc[`MktConnectivityNode`]
+
+
+|===
+
+//[discrete]
+[#registered_distributed_resources]
+=== `registered_distributed_resources`
++++All instances of RegisteredDistributedResource-s+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `this:TechnologiesDataSet.registeredDistributedResources`
+| Cardinality
+| 1..*
+| Type
+| xref::class/RegisteredDistributedResource.adoc[`RegisteredDistributedResource`]
+
+
+|===
+
+//[discrete]
+[#registered_loads]
+=== `registered_loads`
++++All instances of RegisteredLoad-s+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `this:TechnologiesDataSet.registeredLoads`
+| Cardinality
+| 1..*
+| Type
+| xref::class/RegisteredLoad.adoc[`RegisteredLoad`]
+
+
+|===
+
+//[discrete]
+[#release_date]
+=== `release_date`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://purl.org/dc/terms/issued[`dct:issued`]
+| Cardinality
+| 1
+| Type
+| n/a
+
+
+|===
+
+//[discrete]
+[#terminals]
+=== `terminals`
++++All instances of Terminal-s+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `this:TechnologiesDataSet.terminals`
+| Cardinality
+| 1..*
+| Type
+| xref::class/Terminal.adoc[`Terminal`]
+
+
+|===
+
+//[discrete]
+[#version]
+=== `version`
+
+
+[cols="h,4",width=65%]
+|===
+| URI
+| http://www.w3.org/2002/07/owl#versionInfo[`owl:versionInfo`]
+| Cardinality
+| 1
+| Type
+| n/a
+
+
+|===
+
+
