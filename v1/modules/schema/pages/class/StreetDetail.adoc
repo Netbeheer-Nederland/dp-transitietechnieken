@@ -1,0 +1,63 @@
+= `StreetDetail`
+:toclevels: 4
+
+
++++Street details, in the context of address.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Class
+
+| URI
+| `cim:StreetDetail`
+
+
+| CIM standard (perspective)
+| IEC61968 (Enterprise)
+
+
+
+|===
+
+== Class hierarchy
+* *`StreetDetail`*
+
+
+== Slots
+
+
+
+
+[cols="3,1,3,6",width=100%]
+|===
+| Name | Cardinality | Type | Description
+
+| <<number,`number`>>
+| 1
+| https://w3id.org/linkml/String[`string`]
+| +++Designator of the specific location on the street.+++
+|===
+
+'''
+
+
+//[discrete]
+[#number]
+=== `number`
++++Designator of the specific location on the street.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:StreetDetail.number`
+| Cardinality
+| 1
+| Type
+| https://w3id.org/linkml/String[`string`]
+
+
+|===
+
+
