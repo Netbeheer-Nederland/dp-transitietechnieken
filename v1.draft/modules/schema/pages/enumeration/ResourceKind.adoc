@@ -1,0 +1,45 @@
+= `ResourceKind`
+:toclevels: 4
+
+
++++Type of RegisteredResource.+++
+
+
+[cols="h,3",width=65%]
+|===
+| Type
+| Enumeration
+
+| URI
+| `this:ResourceKind`
+
+
+| CIM standard (perspective)
+| IEC61970 (Grid)
+
+
+
+|===
+
+== Values
+
+[cols="1,1,5",width=100%]
+|===
+| Value | URI | Description
+
+| `battery`
+| `this:Battery`
+| n/a
+
+| `conversion`
+| `this:ResourceKind.Conversion`
+| n/a
+
+| `eVChargingStation`
+| `this:ResourceKind.EVChargingStation`
+| n/a
+
+| `pVInstallation`
+| `this:ResourceKind.PVInstallation`
+| n/a
+|===
