@@ -447,42 +447,42 @@ classes:
         multivalued: false
         required: true
       mkt_connectivity_nodes:
-        description: All instances of MktConnectivityNode-s
+        description: All instances of MktConnectivityNodes
         slot_uri: this:TechnologiesDataSet.mktConnectivityNodes
         multivalued: true
         range: MktConnectivityNode
         required: true
         inlined_as_list: true
       terminals:
-        description: All instances of Terminal-s
+        description: All instances of Terminals
         slot_uri: this:TechnologiesDataSet.terminals
         multivalued: true
         range: Terminal
         required: true
         inlined_as_list: true
       energy_consumers:
-        description: All instances of EnergyConsumer-s
+        description: All instances of EnergyConsumers
         slot_uri: this:TechnologiesDataSet.energyConsumers
         multivalued: true
         range: EnergyConsumer
         required: true
         inlined_as_list: true
       market_evaluation_points:
-        description: All instances of MarketEvaluationPoint-s
+        description: All instances of MarketEvaluationPoints
         slot_uri: this:TechnologiesDataSet.marketEvaluationPoints
         multivalued: true
         range: MarketEvaluationPoint
         required: true
         inlined_as_list: true
       registered_loads:
-        description: All instances of RegisteredLoad-s
+        description: All instances of RegisteredLoads
         slot_uri: this:TechnologiesDataSet.registeredLoads
         multivalued: true
         range: RegisteredLoad
         required: true
         inlined_as_list: true
       registered_distributed_resources:
-        description: All instances of RegisteredDistributedResource-s
+        description: All instances of RegisteredDistributedResources
         slot_uri: this:TechnologiesDataSet.registeredDistributedResources
         multivalued: true
         range: RegisteredDistributedResource

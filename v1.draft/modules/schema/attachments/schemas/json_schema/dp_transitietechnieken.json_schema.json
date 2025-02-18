@@ -869,7 +869,7 @@
                 "conforms_to": {},
                 "contact_point": {},
                 "energy_consumers": {
-                    "description": "All instances of EnergyConsumer-s",
+                    "description": "All instances of EnergyConsumers",
                     "items": {
                         "$ref": "#/$defs/EnergyConsumer"
                     },
@@ -877,28 +877,28 @@
                 },
                 "identifier": {},
                 "market_evaluation_points": {
-                    "description": "All instances of MarketEvaluationPoint-s",
+                    "description": "All instances of MarketEvaluationPoints",
                     "items": {
                         "$ref": "#/$defs/MarketEvaluationPoint"
                     },
                     "type": "array"
                 },
                 "mkt_connectivity_nodes": {
-                    "description": "All instances of MktConnectivityNode-s",
+                    "description": "All instances of MktConnectivityNodes",
                     "items": {
                         "$ref": "#/$defs/MktConnectivityNode"
                     },
                     "type": "array"
                 },
                 "registered_distributed_resources": {
-                    "description": "All instances of RegisteredDistributedResource-s",
+                    "description": "All instances of RegisteredDistributedResources",
                     "items": {
                         "$ref": "#/$defs/RegisteredDistributedResource"
                     },
                     "type": "array"
                 },
                 "registered_loads": {
-                    "description": "All instances of RegisteredLoad-s",
+                    "description": "All instances of RegisteredLoads",
                     "items": {
                         "$ref": "#/$defs/RegisteredLoad"
                     },
@@ -906,7 +906,7 @@
                 },
                 "release_date": {},
                 "terminals": {
-                    "description": "All instances of Terminal-s",
+                    "description": "All instances of Terminals",
                     "items": {
                         "$ref": "#/$defs/Terminal"
                     },
@@ -1206,7 +1206,7 @@
         "conforms_to": {},
         "contact_point": {},
         "energy_consumers": {
-            "description": "All instances of EnergyConsumer-s",
+            "description": "All instances of EnergyConsumers",
             "items": {
                 "$ref": "#/$defs/EnergyConsumer"
             },
@@ -1214,28 +1214,28 @@
         },
         "identifier": {},
         "market_evaluation_points": {
-            "description": "All instances of MarketEvaluationPoint-s",
+            "description": "All instances of MarketEvaluationPoints",
             "items": {
                 "$ref": "#/$defs/MarketEvaluationPoint"
             },
             "type": "array"
         },
         "mkt_connectivity_nodes": {
-            "description": "All instances of MktConnectivityNode-s",
+            "description": "All instances of MktConnectivityNodes",
             "items": {
                 "$ref": "#/$defs/MktConnectivityNode"
             },
             "type": "array"
         },
         "registered_distributed_resources": {
-            "description": "All instances of RegisteredDistributedResource-s",
+            "description": "All instances of RegisteredDistributedResources",
             "items": {
                 "$ref": "#/$defs/RegisteredDistributedResource"
             },
             "type": "array"
         },
         "registered_loads": {
-            "description": "All instances of RegisteredLoad-s",
+            "description": "All instances of RegisteredLoads",
             "items": {
                 "$ref": "#/$defs/RegisteredLoad"
             },
@@ -1243,7 +1243,7 @@
         },
         "release_date": {},
         "terminals": {
-            "description": "All instances of Terminal-s",
+            "description": "All instances of Terminals",
             "items": {
                 "$ref": "#/$defs/Terminal"
             },

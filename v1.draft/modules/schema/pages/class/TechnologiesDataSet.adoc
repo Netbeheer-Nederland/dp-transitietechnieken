@@ -197,32 +197,32 @@ legend: "" {
 | <<energy_consumers,`energy_consumers`>>
 | 1..*
 | xref::class/EnergyConsumer.adoc[`EnergyConsumer`]
-| +++All instances of EnergyConsumer-s+++
+| +++All instances of EnergyConsumers+++
 
 | <<market_evaluation_points,`market_evaluation_points`>>
 | 1..*
 | xref::class/MarketEvaluationPoint.adoc[`MarketEvaluationPoint`]
-| +++All instances of MarketEvaluationPoint-s+++
+| +++All instances of MarketEvaluationPoints+++
 
 | <<mkt_connectivity_nodes,`mkt_connectivity_nodes`>>
 | 1..*
 | xref::class/MktConnectivityNode.adoc[`MktConnectivityNode`]
-| +++All instances of MktConnectivityNode-s+++
+| +++All instances of MktConnectivityNodes+++
 
 | <<registered_distributed_resources,`registered_distributed_resources`>>
 | 1..*
 | xref::class/RegisteredDistributedResource.adoc[`RegisteredDistributedResource`]
-| +++All instances of RegisteredDistributedResource-s+++
+| +++All instances of RegisteredDistributedResources+++
 
 | <<registered_loads,`registered_loads`>>
 | 1..*
 | xref::class/RegisteredLoad.adoc[`RegisteredLoad`]
-| +++All instances of RegisteredLoad-s+++
+| +++All instances of RegisteredLoads+++
 
 | <<terminals,`terminals`>>
 | 1..*
 | xref::class/Terminal.adoc[`Terminal`]
-| +++All instances of Terminal-s+++
+| +++All instances of Terminals+++
 |===
 
 '''
@@ -265,7 +265,7 @@ legend: "" {
 //[discrete]
 [#energy_consumers]
 === `energy_consumers`
-+++All instances of EnergyConsumer-s+++
++++All instances of EnergyConsumers+++
 
 [cols="h,4",width=65%]
 |===
@@ -299,7 +299,7 @@ legend: "" {
 //[discrete]
 [#market_evaluation_points]
 === `market_evaluation_points`
-+++All instances of MarketEvaluationPoint-s+++
++++All instances of MarketEvaluationPoints+++
 
 [cols="h,4",width=65%]
 |===
@@ -316,7 +316,7 @@ legend: "" {
 //[discrete]
 [#mkt_connectivity_nodes]
 === `mkt_connectivity_nodes`
-+++All instances of MktConnectivityNode-s+++
++++All instances of MktConnectivityNodes+++
 
 [cols="h,4",width=65%]
 |===
@@ -333,7 +333,7 @@ legend: "" {
 //[discrete]
 [#registered_distributed_resources]
 === `registered_distributed_resources`
-+++All instances of RegisteredDistributedResource-s+++
++++All instances of RegisteredDistributedResources+++
 
 [cols="h,4",width=65%]
 |===
@@ -350,7 +350,7 @@ legend: "" {
 //[discrete]
 [#registered_loads]
 === `registered_loads`
-+++All instances of RegisteredLoad-s+++
++++All instances of RegisteredLoads+++
 
 [cols="h,4",width=65%]
 |===
@@ -384,7 +384,7 @@ legend: "" {
 //[discrete]
 [#terminals]
 === `terminals`
-+++All instances of Terminal-s+++
++++All instances of Terminals+++
 
 [cols="h,4",width=65%]
 |===
