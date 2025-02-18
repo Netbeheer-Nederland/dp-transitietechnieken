@@ -14,7 +14,7 @@ terminals:
   - conducting_equipment: 5b4ff466-da01-4cf3-910a-09065ca69839
     m_rid: a3600324-fb1c-4b2d-a13c-5600698c052b
 energy_consumers:
-  - aggregate: false
+  - aggregate: true
     usage_points:
       - 3c54b0b7-fe17-4d75-8cc0-e226f155f759
     location:
