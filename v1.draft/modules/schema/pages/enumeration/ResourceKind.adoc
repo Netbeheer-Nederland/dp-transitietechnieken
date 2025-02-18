@@ -28,18 +28,18 @@
 | Value | URI | Description
 
 | `battery`
-| `this:Battery`
+| https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/opslaginstallatie[`nbnl:opslaginstallatie`]
 | n/a
 
 | `conversion`
-| `this:ResourceKind.Conversion`
+| https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/verbruiksinstallatie[`nbnl:verbruiksinstallatie`]
 | n/a
 
 | `eVChargingStation`
-| `this:ResourceKind.EVChargingStation`
+| https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/laadinstallatie[`nbnl:laadinstallatie`]
 | n/a
 
 | `pVInstallation`
-| `this:ResourceKind.PVInstallation`
+| https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/productie-installatie[`nbnl:productie-installatie`]
 | n/a
 |===
