@@ -1,0 +1,47 @@
+identifier: '153c4971-89fc-4619-8ffe-307bd95b8a5a'
+conforms_to: http://data.netbeheernederland.nl/data-product/dp-transitietechnieken
+contact_point: 'ritger.teunissen@alliander.com'
+release_date: 2025-02-18
+version: 1.1.0
+mkt_connectivity_nodes:
+  - registered_resource:
+      - e57d6092-e735-4a8f-80e4-b4acaee9a83c
+      - 0b438059-8787-4ab1-be67-0c943949f217
+    terminals:
+      - a3600324-fb1c-4b2d-a13c-5600698c052b
+    m_rid: 45afbbaf-5684-49a4-af8a-22b1af6f4a16
+terminals:
+  - conducting_equipment: 5b4ff466-da01-4cf3-910a-09065ca69839
+    m_rid: a3600324-fb1c-4b2d-a13c-5600698c052b
+energy_consumers:
+  - aggregate: false
+    usage_points:
+      - 3c54b0b7-fe17-4d75-8cc0-e226f155f759
+    location:
+      main_address:
+        postal_code: '1234AB'
+      m_rid: 9f19a01f-afa5-4320-a728-802eb50b3146
+    m_rid: 5b4ff466-da01-4cf3-910a-09065ca69839
+market_evaluation_points:
+  - is_virtual: true
+    m_rid: 3c54b0b7-fe17-4d75-8cc0-e226f155f759
+registered_loads:
+  - is_aggregated_res: 'YES'
+    last_modified: '2025-01-18'
+    detection_method_version: '41f4779b-5293-4dfa-9c73-8c9702eaa53f'
+    resource_type: eVChargingStation
+    resource_capacity:
+      - maximum_capacity: 11
+        unit_multiplier: M
+        unit_symbol: W
+    m_rid: e57d6092-e735-4a8f-80e4-b4acaee9a83c
+registered_distributed_resources:
+  - is_aggregated_res: 'YES'
+    last_modified: '2025-01-18'
+    detection_method_version: '41f4779b-5293-4dfa-9c73-8c9702eaa53f'
+    resource_type: conversion
+    resource_capacity:
+      - maximum_capacity: 2
+        unit_multiplier: M
+        unit_symbol: W
+    m_rid: 0b438059-8787-4ab1-be67-0c943949f217

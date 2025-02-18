@@ -1,5 +1,12 @@
 = Transitietechnieken
 
+The energy transition at the lower voltage (LV) level is steadily progressing
+and is accompanied by a number of complications, in which the data product
+_Energy Transition Techniques_ plays an enabling role. Part of the solution in
+better utalisation of the existing grid is to better align peaks in the demand
+and supply of electricity. This data product provides insight into energy usage
+behind the meter.
+
 .Data Product
 [d2,svg,theme=4]
 ----
@@ -22,12 +29,12 @@ ResourceCapacity.class: market
 
 1.class: empty
 Terminal.class: grid
-Location.class: enterprise
 2.class: empty
-
 3.class: empty
-EnergyConsumer.class: grid
+
 4.class: empty
+EnergyConsumer.class: grid
+Location.class: enterprise
 5.class: empty
 
 6.class: empty
@@ -38,7 +45,7 @@ MarketEvaluationPoint.class: market
 TechnologiesDataSet -> MktConnectivityNode: ""
 MktConnectivityNode -> RegisteredResource: "registered_resource"
 RegisteredResource -> ResourceCapacity: "resource_capacity"
-RegisteredResource -> Location: "location"
+EnergyConsumer -> Location: "location"
 MktConnectivityNode -> Terminal: "terminals"
 EnergyConsumer -> MarketEvaluationPoint: "usage_points"
 Terminal -> EnergyConsumer: "conducting_equipment"
@@ -152,6 +159,17 @@ classes: {
 }
 ----
 
-== Additional schemas
+== Use cases
+
+This information model supports two separate use cases for providing
+information:
+
+* enumeration of ``RegisteredResource``s for one or more ``MktConnectivityNode``s;
+* aggregation of ``RegisteredResource``s, where the ``ResourceCapacity``s
+  describe an aggregated capacity.
+
+== Additional artifacts
 
 * xref:schema:attachment$schemas/json_schema/dp_transitietechnieken.json_schema.json[JSON schema]
+* xref:schema:attachment$examples/dp_transitietechnieken_enumeration.example.json[Enumeration example instance data]
+* xref:schema:attachment$examples/dp_transitietechnieken_aggregation.example.json[Aggregation example instance data]

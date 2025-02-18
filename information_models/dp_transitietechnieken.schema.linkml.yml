@@ -17,8 +17,21 @@ prefixes:
   nl: http://iec.ch/TC57/CIM100-Netherlands#
   owl: http://www.w3.org/2002/07/owl#
   skos: http://www.w3.org/2004/02/skos/core#
+  cbs: https://www.cbs.nl/nl-nl/onze-diensten/methoden/begrippen/
   this: http://data.netbeheernederland.nl/data-product/dp-transitietechnieken/def#
 enums:
+  ResourceKind:
+    description: Type of RegisteredResource.
+    enum_uri: this:ResourceKind
+    permissible_values:
+      pVInstallation:
+        meaning: this:ResourceKind.PVInstallation
+      eVChargingStation:
+        meaning: this:ResourceKind.EVChargingStation
+      battery:
+        meaning: this:Battery
+      conversion:
+        meaning: this:ResourceKind.Conversion
   YesNo:
     description: Used as a flag set to Yes or No.
     from_schema: https://cim.ucaiug.io/ns#TC57CIM
@@ -495,27 +508,37 @@ classes:
     is_a: PowerSystemResource
     attributes:
       is_aggregated_res:
-        description: "A flag to indicate if a resource is an aggregated resource.\r\
-          \n"
+        description: "A flag to indicate if a resource is an aggregated resource."
         slot_uri: cim:RegisteredResource.isAggregatedRes
         multivalued: false
         range: YesNo
         required: true
       last_modified:
-        description: "Indication of the last time this item was modified/versioned.\r\
-          \n"
+        description: "Indication of the last time this item was modified/versioned."
         slot_uri: cim:RegisteredResource.lastModified
         multivalued: false
         range: date
         required: true
+        exact_mappings:
+          - nbnl:detectiemoment
+      detection_method_version:
+        description: "Version of the detection algorithm used to determine the
+          RegisteredResource."
+        slot_uri: this:detectionMethodVersion
+        multivalued: false
+        required: false
+        exact_mappings:
+          - nbnl:detectietechniekversie
       resource_type:
         description: 'The type of resource. Examples include: fuel cell, flywheel,
           photovoltaic, micro-turbine, CHP (combined heat power), V2G (vehicle to
           grid), DES (distributed energy storage), and others.'
         slot_uri: this:RegisteredResource.resourceType
         multivalued: false
-        range: string
+        range: ResourceKind
         required: true
+        exact_mappings:
+          - nbnl:soortInstallatie
       resource_capacity:
         slot_uri: cim:RegisteredResource.ResourceCapacity
         multivalued: true
@@ -534,6 +557,8 @@ classes:
         multivalued: false
         range: double
         required: true
+        exact_mappings:
+          - nbnl:maximumcapaciteit
       unit_multiplier:
         description: Unit-specific multiplier.
         slot_uri: this:ResourceCapacity.unitMultiplier
@@ -722,7 +747,7 @@ classes:
           the EAN code. For details on EAN scheme please refer to the [Codebesluit
           toekenning EAN-codes elektriciteit](https://www.acm.nl/nl/publicaties/codebesluit-toekenning-ean-codes-elektriciteit).
         exact_mappings:
-        - nbnl:EAN
+          - nbnl:europeanArticleNumberEAN
         slot_uri: nl:UsagePoint.europeanArticleNumberEAN
         multivalued: false
         range: string
@@ -782,6 +807,8 @@ classes:
         multivalued: false
         range: string
         required: true
+        exact_mappings:
+          - cbs:postcodegebied
       street_detail:
         description: Street detail.
         slot_uri: cim:StreetAddress.streetDetail
@@ -806,6 +833,8 @@ classes:
       or computed.
     from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC62325.MarketManagement
     is_a: UsagePoint
+    exact_mappings:
+      - nbnl:aansluiting
     class_uri: cim:MarketEvaluationPoint
   RegisteredLoad:
     description: "Model of a load that is registered to participate in the market.\r\
@@ -832,28 +861,4 @@ classes:
       nodes.
     from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Core
     is_a: IdentifiedObject
-    attributes:
-      connected:
-        description: "The connected status is related to a bus-branch model and the\
-          \ topological node to terminal relation.  True implies the terminal is connected\
-          \ to the related topological node and false implies it is not. \r\nIn a\
-          \ bus-branch model, the connected status is used to tell if equipment is\
-          \ disconnected without having to change the connectivity described by the\
-          \ topological node to terminal relation. A valid case is that conducting\
-          \ equipment can be connected in one end and open in the other. In particular\
-          \ for an AC line segment, where the reactive line charging can be significant,\
-          \ this is a relevant case.\r\n"
-        slot_uri: cim:ACDCTerminal.connected
-        multivalued: false
-        range: boolean
-        required: false
-      sequence_number:
-        description: "The orientation of the terminal connections for a multiple terminal\
-          \ conducting equipment.  The sequence numbering starts with 1 and additional\
-          \ terminals should follow in increasing order.   The first terminal is the\
-          \ \"starting point\" for a two terminal branch.\r\n"
-        slot_uri: cim:ACDCTerminal.sequenceNumber
-        multivalued: false
-        range: integer
-        required: false
     class_uri: cim:ACDCTerminal
