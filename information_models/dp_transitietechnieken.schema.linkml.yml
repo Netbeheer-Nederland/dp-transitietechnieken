@@ -25,13 +25,13 @@ enums:
     enum_uri: this:ResourceKind
     permissible_values:
       pVInstallation:
-        meaning: this:ResourceKind.PVInstallation
+        meaning: nbnl:productie-installatie
       eVChargingStation:
-        meaning: this:ResourceKind.EVChargingStation
+        meaning: nbnl:laadinstallatie
       battery:
-        meaning: this:Battery
+        meaning: nbnl:opslaginstallatie
       conversion:
-        meaning: this:ResourceKind.Conversion
+        meaning: nbnl:verbruiksinstallatie
   YesNo:
     description: Used as a flag set to Yes or No.
     from_schema: https://cim.ucaiug.io/ns#TC57CIM
