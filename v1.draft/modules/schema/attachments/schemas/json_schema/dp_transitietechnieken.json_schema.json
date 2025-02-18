@@ -634,7 +634,7 @@
                 },
                 "resource_type": {
                     "$ref": "#/$defs/ResourceKind",
-                    "description": "The type of resource. Examples include: fuel cell, flywheel, photovoltaic, micro-turbine, CHP (combined heat power), V2G (vehicle to grid), DES (distributed energy storage), and others."
+                    "description": "The type of resource."
                 }
             },
             "required": [
@@ -703,7 +703,7 @@
                 },
                 "resource_type": {
                     "$ref": "#/$defs/ResourceKind",
-                    "description": "The type of resource. Examples include: fuel cell, flywheel, photovoltaic, micro-turbine, CHP (combined heat power), V2G (vehicle to grid), DES (distributed energy storage), and others."
+                    "description": "The type of resource."
                 }
             },
             "required": [
@@ -772,7 +772,7 @@
                 },
                 "resource_type": {
                     "$ref": "#/$defs/ResourceKind",
-                    "description": "The type of resource. Examples include: fuel cell, flywheel, photovoltaic, micro-turbine, CHP (combined heat power), V2G (vehicle to grid), DES (distributed energy storage), and others."
+                    "description": "The type of resource."
                 }
             },
             "required": [

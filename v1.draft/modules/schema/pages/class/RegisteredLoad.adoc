@@ -156,7 +156,7 @@ legend: "" {
 | <<resource_type,`resource_type`>>
 | 1
 | xref::enumeration/ResourceKind.adoc[`ResourceKind`]
-| +++The type of resource. Examples include: fuel cell, flywheel, photovoltaic, micro-turbine, CHP (combined heat power), V2G (vehicle to grid), DES (distributed energy storage), and others.+++
+| +++The type of resource.+++
 
 | <<resource_capacity,`resource_capacity`>>
 | 1..*
@@ -391,7 +391,7 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 //[discrete]
 [#resource_type]
 === `resource_type`
-+++The type of resource. Examples include: fuel cell, flywheel, photovoltaic, micro-turbine, CHP (combined heat power), V2G (vehicle to grid), DES (distributed energy storage), and others.+++
++++The type of resource.+++
 
 [cols="h,4",width=65%]
 |===

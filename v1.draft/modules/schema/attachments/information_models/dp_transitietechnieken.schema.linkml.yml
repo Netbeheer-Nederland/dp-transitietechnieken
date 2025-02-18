@@ -531,9 +531,7 @@ classes:
         exact_mappings:
           - nbnl:detectietechniekversie
       resource_type:
-        description: 'The type of resource. Examples include: fuel cell, flywheel,
-          photovoltaic, micro-turbine, CHP (combined heat power), V2G (vehicle to
-          grid), DES (distributed energy storage), and others.'
+        description: 'The type of resource.'
         slot_uri: this:RegisteredResource.resourceType
         multivalued: false
         range: ResourceKind
