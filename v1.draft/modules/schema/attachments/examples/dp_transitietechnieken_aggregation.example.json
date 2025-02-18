@@ -24,7 +24,7 @@
   ],
   "energy_consumers": [
     {
-      "aggregate": false,
+      "aggregate": true,
       "usage_points": [
         "3c54b0b7-fe17-4d75-8cc0-e226f155f759"
       ],
