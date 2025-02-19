@@ -7,8 +7,6 @@ mkt_connectivity_nodes:
   - registered_resource:
       - e57d6092-e735-4a8f-80e4-b4acaee9a83c
       - 0b438059-8787-4ab1-be67-0c943949f217
-    terminals:
-      - a3600324-fb1c-4b2d-a13c-5600698c052b
     m_rid: 45afbbaf-5684-49a4-af8a-22b1af6f4a16
 terminals:
   - conducting_equipment: 5b4ff466-da01-4cf3-910a-09065ca69839
@@ -17,17 +15,16 @@ energy_consumers:
   - aggregate: false
     usage_points:
       - 3c54b0b7-fe17-4d75-8cc0-e226f155f759
-    location:
-      main_address:
-        postal_code: '1234AB'
-        street_detail:
-          number: '2'
-      description: ''
-      m_rid: 9f19a01f-afa5-4320-a728-802eb50b3146
     m_rid: 5b4ff466-da01-4cf3-910a-09065ca69839
 market_evaluation_points:
   - european_article_number_ean: '123456789101112131'
     is_virtual: false
+    usage_point_location:
+      main_address:
+        postal_code: '1234AB'
+        street_detail:
+          number: '2'
+      m_rid: 9f19a01f-afa5-4320-a728-802eb50b3146
     m_rid: 3c54b0b7-fe17-4d75-8cc0-e226f155f759
 registered_loads:
   - is_aggregated_res: 'NO'
@@ -49,3 +46,9 @@ registered_distributed_resources:
         unit_multiplier: k
         unit_symbol: W
     m_rid: 0b438059-8787-4ab1-be67-0c943949f217
+topological_nodes:
+  - connectivity_nodes:
+      - 45afbbaf-5684-49a4-af8a-22b1af6f4a16
+    terminal:
+      - a3600324-fb1c-4b2d-a13c-5600698c052b
+    m_rid: 1724477e-ffa5-404b-869e-e21b900b83e6
