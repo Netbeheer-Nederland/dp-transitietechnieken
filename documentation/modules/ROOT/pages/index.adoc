@@ -40,6 +40,17 @@ MarketEvaluationPoint.class: market
 Location.class: enterprise
 6.class: empty
 
+ResourcesDataSet -> TopologicalNode: "topological_nodes"
+TopologicalNode -> MktConnectivityNode: "connectivity_node"
+MktConnectivityNode -> RegisteredLoad: "registered_resource"
+MktConnectivityNode -> RegisteredDistributed\nResource: "registered_resource"
+RegisteredLoad -> ResourceCapacity: "resource_capacity"
+RegisteredDistributed\nResource -> ResourceCapacity: "resource_capacity"
+TopologicalNode -> Terminal: "terminals"
+EnergyConsumer -> MarketEvaluationPoint: "usage_points"
+MarketEvaluationPoint -> Location: "usage_point_location"
+Terminal -> EnergyConsumer: "conducting_equipment"
+
 classes: {
   empty: {
     label: ""
