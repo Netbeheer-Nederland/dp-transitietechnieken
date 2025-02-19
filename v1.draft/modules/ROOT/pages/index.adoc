@@ -10,7 +10,7 @@ behind the meter.
 .Data Product
 [d2,svg,theme=4]
 ----
-grid-rows: 4
+grid-rows: 3
 grid-columns: 5
 
 horizontal-gap: 160
@@ -25,35 +25,20 @@ vars: {
 ResourcesDataSet.class: dataset
 TopologicalNode.class: grid
 MktConnectivityNode.class: market
-RegisteredResource.class: market
+RegisteredLoad.class: market
 ResourceCapacity.class: market
 
 1.class: empty
 Terminal.class: grid
 2.class: empty
-3.class: empty
+RegisteredDistributed\nResource.class: market
 4.class: empty
 
 5.class: empty
 EnergyConsumer.class: grid
-6.class: empty
-7.class: empty
-8.class: empty
-
-9.class: empty
 MarketEvaluationPoint.class: market
 Location.class: enterprise
-10.class: empty
-11.class: empty
-
-ResourcesDataSet -> TopologicalNode: ""
-TopologicalNode -> MktConnectivityNode: "connectivity_node"
-MktConnectivityNode -> RegisteredResource: "registered_resource"
-RegisteredResource -> ResourceCapacity: "resource_capacity"
-TopologicalNode -> Terminal: "terminals"
-EnergyConsumer -> MarketEvaluationPoint: "usage_points"
-MarketEvaluationPoint -> Location: "usage_point_location"
-Terminal -> EnergyConsumer: "conducting_equipment"
+6.class: empty
 
 classes: {
   empty: {
