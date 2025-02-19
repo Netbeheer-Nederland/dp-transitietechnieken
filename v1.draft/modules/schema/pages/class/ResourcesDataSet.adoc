@@ -1,4 +1,4 @@
-= `TechnologiesDataSet`
+= `ResourcesDataSet`
 :toclevels: 4
 
 
@@ -11,7 +11,7 @@
 | Class
 
 | URI
-| `this:TechnologiesDataSet`
+| `this:ResourcesDataSet`
 
 
 
@@ -19,7 +19,7 @@
 |===
 
 == Class hierarchy
-* *`TechnologiesDataSet`*
+* *`ResourcesDataSet`*
 
 
 == Slots
@@ -34,7 +34,7 @@ vars: {
     pad: 20
   }
 }
-TechnologiesDataSet {
+ResourcesDataSet {
   style {
     fill: "#cccccc"
     shadow: true
@@ -97,23 +97,35 @@ RegisteredDistributedResource {
 
 
 
-
-TechnologiesDataSet -> MktConnectivityNode: mkt_connectivity_nodes
-
-
-TechnologiesDataSet -> Terminal: terminals
-
-
-TechnologiesDataSet -> EnergyConsumer: energy_consumers
+TopologicalNode {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
 
 
-TechnologiesDataSet -> MarketEvaluationPoint: market_evaluation_points
 
 
-TechnologiesDataSet -> RegisteredLoad: registered_loads
+ResourcesDataSet -> MktConnectivityNode: mkt_connectivity_nodes
 
 
-TechnologiesDataSet -> RegisteredDistributedResource: registered_distributed_resources
+ResourcesDataSet -> Terminal: terminals
+
+
+ResourcesDataSet -> EnergyConsumer: energy_consumers
+
+
+ResourcesDataSet -> MarketEvaluationPoint: market_evaluation_points
+
+
+ResourcesDataSet -> RegisteredLoad: registered_loads
+
+
+ResourcesDataSet -> RegisteredDistributedResource: registered_distributed_resources
+
+
+ResourcesDataSet -> TopologicalNode: topological_nodes
 
 
 legend: "" {
@@ -223,6 +235,11 @@ legend: "" {
 | 1..*
 | xref::class/Terminal.adoc[`Terminal`]
 | +++All instances of Terminals+++
+
+| <<topological_nodes,`topological_nodes`>>
+| 1..*
+| xref::class/TopologicalNode.adoc[`TopologicalNode`]
+| +++All instances of TopologicalNodes+++
 |===
 
 '''
@@ -270,7 +287,7 @@ legend: "" {
 [cols="h,4",width=65%]
 |===
 | URI
-| `this:TechnologiesDataSet.energyConsumers`
+| `this:ResourcesDataSet.energyConsumers`
 | Cardinality
 | 1..*
 | Type
@@ -304,7 +321,7 @@ legend: "" {
 [cols="h,4",width=65%]
 |===
 | URI
-| `this:TechnologiesDataSet.marketEvaluationPoints`
+| `this:ResourcesDataSet.marketEvaluationPoints`
 | Cardinality
 | 1..*
 | Type
@@ -321,7 +338,7 @@ legend: "" {
 [cols="h,4",width=65%]
 |===
 | URI
-| `this:TechnologiesDataSet.mktConnectivityNodes`
+| `this:ResourcesDataSet.mktConnectivityNodes`
 | Cardinality
 | 1..*
 | Type
@@ -338,7 +355,7 @@ legend: "" {
 [cols="h,4",width=65%]
 |===
 | URI
-| `this:TechnologiesDataSet.registeredDistributedResources`
+| `this:ResourcesDataSet.registeredDistributedResources`
 | Cardinality
 | 1..*
 | Type
@@ -355,7 +372,7 @@ legend: "" {
 [cols="h,4",width=65%]
 |===
 | URI
-| `this:TechnologiesDataSet.registeredLoads`
+| `this:ResourcesDataSet.registeredLoads`
 | Cardinality
 | 1..*
 | Type
@@ -389,11 +406,28 @@ legend: "" {
 [cols="h,4",width=65%]
 |===
 | URI
-| `this:TechnologiesDataSet.terminals`
+| `this:ResourcesDataSet.terminals`
 | Cardinality
 | 1..*
 | Type
 | xref::class/Terminal.adoc[`Terminal`]
+
+
+|===
+
+//[discrete]
+[#topological_nodes]
+=== `topological_nodes`
++++All instances of TopologicalNodes+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `this:ResourcesDataSet.TopologicalNodes`
+| Cardinality
+| 1..*
+| Type
+| xref::class/TopologicalNode.adoc[`TopologicalNode`]
 
 
 |===

@@ -48,6 +48,15 @@ UsagePoint {
 
 
 
+UsagePointLocation {
+  style {
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
 Name {
   style {
     fill: "#eccfcb"
@@ -56,6 +65,9 @@ Name {
 }
 
 
+
+
+UsagePoint -> UsagePointLocation: usage_point_location
 
 
 UsagePoint -> Name: names
@@ -123,6 +135,11 @@ legend: "" {
 | 0..1
 | https://w3id.org/linkml/String[`string`]
 | +++The attribute is used for an exchange of the EAN code (European Article Number). The length of the string is 18 characters as defined by the EAN code. For details on EAN scheme please refer to the [Codebesluit toekenning EAN-codes elektriciteit](https://www.acm.nl/nl/publicaties/codebesluit-toekenning-ean-codes-elektriciteit).+++
+
+| <<usage_point_location,`usage_point_location`>>
+| 0..1
+| xref::class/UsagePointLocation.adoc[`UsagePointLocation`]
+| +++Location of this usage point.+++
 
 | <<description,`description`>>
 | 0..1
@@ -252,6 +269,23 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 
 | Inherited from
 | xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#usage_point_location]
+=== `usage_point_location`
++++Location of this usage point.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:UsagePoint.UsagePointLocation`
+| Cardinality
+| 0..1
+| Type
+| xref::class/UsagePointLocation.adoc[`UsagePointLocation`]
 
 
 |===

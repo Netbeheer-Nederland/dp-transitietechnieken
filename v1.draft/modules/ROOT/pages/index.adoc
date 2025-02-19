@@ -22,7 +22,8 @@ vars: {
   }
 }
 
-TechnologiesDataSet.class: dataset
+ResourcesDataSet.class: dataset
+TopologicalNode.class: grid
 MktConnectivityNode.class: market
 RegisteredResource.class: market
 ResourceCapacity.class: market
@@ -31,23 +32,27 @@ ResourceCapacity.class: market
 Terminal.class: grid
 2.class: empty
 3.class: empty
-
 4.class: empty
-EnergyConsumer.class: grid
-Location.class: enterprise
-5.class: empty
 
+5.class: empty
+EnergyConsumer.class: grid
 6.class: empty
-MarketEvaluationPoint.class: market
 7.class: empty
 8.class: empty
 
-TechnologiesDataSet -> MktConnectivityNode: ""
+9.class: empty
+MarketEvaluationPoint.class: market
+Location.class: enterprise
+10.class: empty
+11.class: empty
+
+ResourcesDataSet -> TopologicalNode: ""
+TopologicalNode -> MktConnectivityNode: "connectivity_node"
 MktConnectivityNode -> RegisteredResource: "registered_resource"
 RegisteredResource -> ResourceCapacity: "resource_capacity"
-EnergyConsumer -> Location: "location"
-MktConnectivityNode -> Terminal: "terminals"
+TopologicalNode -> Terminal: "terminals"
 EnergyConsumer -> MarketEvaluationPoint: "usage_points"
+MarketEvaluationPoint -> Location: "usage_point_location"
 Terminal -> EnergyConsumer: "conducting_equipment"
 
 classes: {

@@ -423,7 +423,7 @@ enums:
       WPerW:
         meaning: cim:UnitSymbol.WPerW
 classes:
-  TechnologiesDataSet:
+  ResourcesDataSet:
     description: A single instance of a published dataset.
     attributes:
       identifier:
@@ -448,47 +448,54 @@ classes:
         required: true
       mkt_connectivity_nodes:
         description: All instances of MktConnectivityNodes
-        slot_uri: this:TechnologiesDataSet.mktConnectivityNodes
+        slot_uri: this:ResourcesDataSet.mktConnectivityNodes
         multivalued: true
         range: MktConnectivityNode
         required: true
         inlined_as_list: true
       terminals:
         description: All instances of Terminals
-        slot_uri: this:TechnologiesDataSet.terminals
+        slot_uri: this:ResourcesDataSet.terminals
         multivalued: true
         range: Terminal
         required: true
         inlined_as_list: true
       energy_consumers:
         description: All instances of EnergyConsumers
-        slot_uri: this:TechnologiesDataSet.energyConsumers
+        slot_uri: this:ResourcesDataSet.energyConsumers
         multivalued: true
         range: EnergyConsumer
         required: true
         inlined_as_list: true
       market_evaluation_points:
         description: All instances of MarketEvaluationPoints
-        slot_uri: this:TechnologiesDataSet.marketEvaluationPoints
+        slot_uri: this:ResourcesDataSet.marketEvaluationPoints
         multivalued: true
         range: MarketEvaluationPoint
         required: true
         inlined_as_list: true
       registered_loads:
         description: All instances of RegisteredLoads
-        slot_uri: this:TechnologiesDataSet.registeredLoads
+        slot_uri: this:ResourcesDataSet.registeredLoads
         multivalued: true
         range: RegisteredLoad
         required: true
         inlined_as_list: true
       registered_distributed_resources:
         description: All instances of RegisteredDistributedResources
-        slot_uri: this:TechnologiesDataSet.registeredDistributedResources
+        slot_uri: this:ResourcesDataSet.registeredDistributedResources
         multivalued: true
         range: RegisteredDistributedResource
         required: true
         inlined_as_list: true
-    class_uri: this:TechnologiesDataSet
+      topological_nodes:
+        description: All instances of TopologicalNodes
+        slot_uri: this:ResourcesDataSet.TopologicalNodes
+        multivalued: true
+        range: TopologicalNode
+        required: true
+        inlined_as_list: true
+    class_uri: this:ResourcesDataSet
     tree_root: true
   MktConnectivityNode:
     description: Subclass of IEC61970:Topology:ConnectivityNode.
@@ -763,6 +770,13 @@ classes:
         multivalued: false
         range: boolean
         required: true
+      usage_point_location:
+        slot_uri: cim:UsagePoint.UsagePointLocation
+        range: UsagePointLocation
+        required: false
+        multivalued: false
+        description: Location of this usage point.
+        inlined_as_list: true
     class_uri: cim:UsagePoint
   PowerSystemResource:
     description: A power system resource (PSR) can be an item of equipment such as
@@ -771,20 +785,16 @@ classes:
       Power system resources can have measurements associated.
     from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Core
     is_a: IdentifiedObject
-    attributes:
-      location:
-        description: Location of this power system resource.
-        slot_uri: cim:PowerSystemResource.Location
-        multivalued: false
-        range: Location
-        required: false
-        inlined_as_list: true
     class_uri: cim:PowerSystemResource
+  UsagePointLocation:
+    class_uri: cim:UsagePointLocation
+    is_a: Location
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61968.Metering
+    description: "Location of an individual usage point."
   Location:
-    description: "The place, scene, or point of something where someone or something\
-      \ has been, is, and/or will be at a given moment in time. It can be defined\
-      \ with one or more position points (coordinates) in a given coordinate system.\r\
-      \n"
+    description: "The place, scene, or point of something where someone or something
+      \ has been, is, and/or will be at a given moment in time. It can be defined
+      \ with one or more position points (coordinates) in a given coordinate system."
     from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61968.Common
     is_a: IdentifiedObject
     attributes:
@@ -861,3 +871,33 @@ classes:
     from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Core
     is_a: IdentifiedObject
     class_uri: cim:ACDCTerminal
+  TopologicalNode:
+    description: "For a detailed substation model a topological node is a set of connectivity\
+      \ nodes that, in the current network state, are connected together through any\
+      \ type of closed switches, including  jumpers. Topological nodes change as the\
+      \ current network state changes (i.e., switches, breakers, etc. change state).\r\
+      \nFor a planning model, switch statuses are not used to form topological nodes.\
+      \ Instead they are manually created or deleted in a model builder tool. Topological\
+      \ nodes maintained this way are also called \"busses\"."
+    from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Topology
+    is_a: IdentifiedObject
+    attributes:
+      connectivity_nodes:
+        description: The connectivity nodes combine together to form this topological
+          node.  May depend on the current state of switches in the network.
+        slot_uri: cim:TopologicalNode.ConnectivityNodes
+        multivalued: true
+        range: ConnectivityNode
+        required: false
+      terminal:
+        description:
+          The terminals associated with the topological node. This can be used
+          as an alternative to the connectivity node path to terminal, thus
+          making it unnecessary to model connectivity nodes in some cases.
+          Note that if connectivity nodes are in the model, this association
+          would probably not be used as an input specification.
+        slot_uri: cim:TopologicalNode.Terminal
+        multivalued: true
+        range: Terminal
+        required: true
+    class_uri: cim:TopologicalNode

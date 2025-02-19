@@ -2,7 +2,7 @@
 :toclevels: 4
 
 
-+++The place, scene, or point of something where someone or something has been, is, and/or will be at a given moment in time. It can be defined with one or more position points (coordinates) in a given coordinate system.+++
++++The place, scene, or point of something where someone or something  has been, is, and/or will be at a given moment in time. It can be defined  with one or more position points (coordinates) in a given coordinate system.+++
 
 
 [cols="h,3",width=65%]
@@ -24,6 +24,7 @@
 == Class hierarchy
 * xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
 ** *`Location`*
+ *** xref::class/UsagePointLocation.adoc[`UsagePointLocation`]
 
 
 == Slots

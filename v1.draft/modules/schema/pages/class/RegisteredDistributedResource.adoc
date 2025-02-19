@@ -58,15 +58,6 @@ ResourceCapacity {
 
 
 
-Location {
-  style {
-    fill: "#d1e7c2"
-    shadow: true
-  }
-}
-
-
-
 Name {
   style {
     fill: "#eccfcb"
@@ -78,9 +69,6 @@ Name {
 
 
 RegisteredDistributedResource -> ResourceCapacity: resource_capacity
-
-
-RegisteredDistributedResource -> Location: location
 
 
 RegisteredDistributedResource -> Name: names
@@ -168,11 +156,6 @@ legend: "" {
 | 0..1
 | n/a
 | +++Version of the detection algorithm used to determine the RegisteredResource.+++
-
-| <<location,`location`>>
-| 0..1
-| xref::class/Location.adoc[`Location`]
-| +++Location of this power system resource.+++
 
 | <<m_rid,`m_rid`>>
 | 0..1
@@ -299,26 +282,6 @@ https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/detectiemom
 
 
 !===
-
-
-|===
-
-//[discrete]
-[#location]
-=== `location`
-+++Location of this power system resource.+++
-
-[cols="h,4",width=65%]
-|===
-| URI
-| `cim:PowerSystemResource.Location`
-| Cardinality
-| 0..1
-| Type
-| xref::class/Location.adoc[`Location`]
-
-| Inherited from
-| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
 
 
 |===

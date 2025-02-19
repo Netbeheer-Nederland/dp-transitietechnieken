@@ -1,8 +1,9 @@
-= `IdentifiedObject`
+= `TopologicalNode`
 :toclevels: 4
 
 
-+++This is a root class to provide common identification for all classes needing identification and naming attributes.+++
++++For a detailed substation model a topological node is a set of connectivity nodes that, in the current network state, are connected together through any type of closed switches, including  jumpers. Topological nodes change as the current network state changes (i.e., switches, breakers, etc. change state).
+For a planning model, switch statuses are not used to form topological nodes. Instead they are manually created or deleted in a model builder tool. Topological nodes maintained this way are also called "busses".+++
 
 
 [cols="h,3",width=65%]
@@ -11,7 +12,7 @@
 | Class
 
 | URI
-| `cim:IdentifiedObject`
+| `cim:TopologicalNode`
 
 
 | CIM standard (perspective)
@@ -22,13 +23,8 @@
 |===
 
 == Class hierarchy
-* *`IdentifiedObject`*
- ** xref::class/ACDCTerminal.adoc[`ACDCTerminal`]
- ** xref::class/ConnectivityNode.adoc[`ConnectivityNode`]
- ** xref::class/Location.adoc[`Location`]
- ** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
- ** xref::class/TopologicalNode.adoc[`TopologicalNode`]
- ** xref::class/UsagePoint.adoc[`UsagePoint`]
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** *`TopologicalNode`*
 
 
 == Slots
@@ -43,7 +39,25 @@ vars: {
     pad: 20
   }
 }
-IdentifiedObject {
+TopologicalNode {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+ConnectivityNode {
+  style {
+    fill: "#eccfcb"
+    shadow: true
+  }
+}
+
+
+
+Terminal {
   style {
     fill: "#eccfcb"
     shadow: true
@@ -62,7 +76,13 @@ Name {
 
 
 
-IdentifiedObject -> Name: names
+TopologicalNode -> ConnectivityNode: connectivity_nodes
+
+
+TopologicalNode -> Terminal: terminal
+
+
+TopologicalNode -> Name: names
 
 
 legend: "" {
@@ -118,6 +138,16 @@ legend: "" {
 |===
 | Name | Cardinality | Type | Description
 
+| <<terminal,`terminal`>>
+| 1..*
+| xref::class/Terminal.adoc[`Terminal`]
+| +++The terminals associated with the topological node. This can be used as an alternative to the connectivity node path to terminal, thus making it unnecessary to model connectivity nodes in some cases. Note that if connectivity nodes are in the model, this association would probably not be used as an input specification.+++
+
+| <<connectivity_nodes,`connectivity_nodes`>>
+| 0..*
+| xref::class/ConnectivityNode.adoc[`ConnectivityNode`]
+| +++The connectivity nodes combine together to form this topological node.  May depend on the current state of switches in the network.+++
+
 | <<description,`description`>>
 | 0..1
 | https://w3id.org/linkml/String[`string`]
@@ -139,6 +169,23 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 
 
 //[discrete]
+[#connectivity_nodes]
+=== `connectivity_nodes`
++++The connectivity nodes combine together to form this topological node.  May depend on the current state of switches in the network.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TopologicalNode.ConnectivityNodes`
+| Cardinality
+| 0..*
+| Type
+| xref::class/ConnectivityNode.adoc[`ConnectivityNode`]
+
+
+|===
+
+//[discrete]
 [#description]
 === `description`
 +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
@@ -151,6 +198,9 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 | 0..1
 | Type
 | https://w3id.org/linkml/String[`string`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
 
 
 |===
@@ -170,6 +220,9 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 | Type
 | https://w3id.org/linkml/String[`string`]
 
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
 
 |===
 
@@ -186,6 +239,26 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 | 0..*
 | Type
 | xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#terminal]
+=== `terminal`
++++The terminals associated with the topological node. This can be used as an alternative to the connectivity node path to terminal, thus making it unnecessary to model connectivity nodes in some cases. Note that if connectivity nodes are in the model, this association would probably not be used as an input specification.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:TopologicalNode.Terminal`
+| Cardinality
+| 1..*
+| Type
+| xref::class/Terminal.adoc[`Terminal`]
 
 
 |===

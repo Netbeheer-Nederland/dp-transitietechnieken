@@ -60,15 +60,6 @@ UsagePoint {
 
 
 
-Location {
-  style {
-    fill: "#d1e7c2"
-    shadow: true
-  }
-}
-
-
-
 Name {
   style {
     fill: "#eccfcb"
@@ -80,9 +71,6 @@ Name {
 
 
 EnergyConnection -> UsagePoint: usage_points
-
-
-EnergyConnection -> Location: location
 
 
 EnergyConnection -> Name: names
@@ -152,11 +140,6 @@ The attribute is not used for EquivalentBranch, EquivalentShunt and EquivalentIn
 | https://w3id.org/linkml/String[`string`]
 | +++The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.+++
 
-| <<location,`location`>>
-| 0..1
-| xref::class/Location.adoc[`Location`]
-| +++Location of this power system resource.+++
-
 | <<m_rid,`m_rid`>>
 | 0..1
 | https://w3id.org/linkml/String[`string`]
@@ -214,26 +197,6 @@ The attribute is not used for EquivalentBranch, EquivalentShunt and EquivalentIn
 
 | Inherited from
 | xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
-
-
-|===
-
-//[discrete]
-[#location]
-=== `location`
-+++Location of this power system resource.+++
-
-[cols="h,4",width=65%]
-|===
-| URI
-| `cim:PowerSystemResource.Location`
-| Cardinality
-| 0..1
-| Type
-| xref::class/Location.adoc[`Location`]
-
-| Inherited from
-| xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
 
 
 |===

@@ -1,8 +1,8 @@
-= `IdentifiedObject`
+= `UsagePointLocation`
 :toclevels: 4
 
 
-+++This is a root class to provide common identification for all classes needing identification and naming attributes.+++
++++Location of an individual usage point.+++
 
 
 [cols="h,3",width=65%]
@@ -11,24 +11,20 @@
 | Class
 
 | URI
-| `cim:IdentifiedObject`
+| `cim:UsagePointLocation`
 
 
 | CIM standard (perspective)
-| IEC61970 (Grid)
+| IEC61968 (Enterprise)
 
 
 
 |===
 
 == Class hierarchy
-* *`IdentifiedObject`*
- ** xref::class/ACDCTerminal.adoc[`ACDCTerminal`]
- ** xref::class/ConnectivityNode.adoc[`ConnectivityNode`]
- ** xref::class/Location.adoc[`Location`]
- ** xref::class/PowerSystemResource.adoc[`PowerSystemResource`]
- ** xref::class/TopologicalNode.adoc[`TopologicalNode`]
- ** xref::class/UsagePoint.adoc[`UsagePoint`]
+* xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+** xref::class/Location.adoc[`Location`]
+*** *`UsagePointLocation`*
 
 
 == Slots
@@ -43,9 +39,18 @@ vars: {
     pad: 20
   }
 }
-IdentifiedObject {
+UsagePointLocation {
   style {
-    fill: "#eccfcb"
+    fill: "#d1e7c2"
+    shadow: true
+  }
+}
+
+
+
+StreetAddress {
+  style {
+    fill: "#d1e7c2"
     shadow: true
   }
 }
@@ -62,7 +67,10 @@ Name {
 
 
 
-IdentifiedObject -> Name: names
+UsagePointLocation -> StreetAddress: main_address
+
+
+UsagePointLocation -> Name: names
 
 
 legend: "" {
@@ -118,6 +126,11 @@ legend: "" {
 |===
 | Name | Cardinality | Type | Description
 
+| <<main_address,`main_address`>>
+| 1
+| xref::class/StreetAddress.adoc[`StreetAddress`]
+| +++Main address of the location.+++
+
 | <<description,`description`>>
 | 0..1
 | https://w3id.org/linkml/String[`string`]
@@ -152,6 +165,9 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 | Type
 | https://w3id.org/linkml/String[`string`]
 
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
 
 |===
 
@@ -170,6 +186,29 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 | Type
 | https://w3id.org/linkml/String[`string`]
 
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
+
+
+|===
+
+//[discrete]
+[#main_address]
+=== `main_address`
++++Main address of the location.+++
+
+[cols="h,4",width=65%]
+|===
+| URI
+| `cim:Location.mainAddress`
+| Cardinality
+| 1
+| Type
+| xref::class/StreetAddress.adoc[`StreetAddress`]
+
+| Inherited from
+| xref::class/Location.adoc[`Location`]
+
 
 |===
 
@@ -186,6 +225,9 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 | 0..*
 | Type
 | xref::class/Name.adoc[`Name`]
+
+| Inherited from
+| xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
 
 
 |===

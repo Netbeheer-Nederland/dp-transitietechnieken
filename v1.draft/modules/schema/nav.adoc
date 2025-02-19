@@ -2,7 +2,7 @@
 * Information model
 ** xref::index.adoc[Index]
 ** Classes
-*** xref::class/TechnologiesDataSet.adoc[`TechnologiesDataSet` (root)]
+*** xref::class/ResourcesDataSet.adoc[`ResourcesDataSet` (root)]
 
 *** xref::class/ACDCTerminal.adoc[`ACDCTerminal`]
 
@@ -76,6 +76,7 @@
 
 
 
+
 *** xref::class/StreetAddress.adoc[`StreetAddress`]
 
 
@@ -84,12 +85,19 @@
 
 
 
-
 *** xref::class/Terminal.adoc[`Terminal`]
 
 
 
+*** xref::class/TopologicalNode.adoc[`TopologicalNode`]
+
+
+
 *** xref::class/UsagePoint.adoc[`UsagePoint`]
+
+
+
+*** xref::class/UsagePointLocation.adoc[`UsagePointLocation`]
 
 
 
