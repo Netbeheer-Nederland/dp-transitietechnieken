@@ -583,14 +583,6 @@ classes:
       are connected together with zero impedance.
     from_schema: https://cim.ucaiug.io/ns#TC57CIM.IEC61970.Base.Core
     is_a: IdentifiedObject
-    attributes:
-      terminals:
-        description: 'Terminals interconnected with zero impedance at a this connectivity
-          node. '
-        slot_uri: cim:ConnectivityNode.Terminals
-        multivalued: true
-        range: Terminal
-        required: false
     class_uri: cim:ConnectivityNode
   Terminal:
     description: An AC electrical connection point to a piece of conducting equipment.

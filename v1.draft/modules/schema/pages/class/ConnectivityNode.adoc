@@ -48,15 +48,6 @@ ConnectivityNode {
 
 
 
-Terminal {
-  style {
-    fill: "#eccfcb"
-    shadow: true
-  }
-}
-
-
-
 Name {
   style {
     fill: "#eccfcb"
@@ -65,9 +56,6 @@ Name {
 }
 
 
-
-
-ConnectivityNode -> Terminal: terminals
 
 
 ConnectivityNode -> Name: names
@@ -125,11 +113,6 @@ legend: "" {
 [cols="3,1,3,6",width=100%]
 |===
 | Name | Cardinality | Type | Description
-
-| <<terminals,`terminals`>>
-| 0..*
-| xref::class/Terminal.adoc[`Terminal`]
-| +++Terminals interconnected with zero impedance at a this connectivity node.+++
 
 | <<description,`description`>>
 | 0..1
@@ -208,23 +191,6 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 
 | Inherited from
 | xref::class/IdentifiedObject.adoc[`IdentifiedObject`]
-
-
-|===
-
-//[discrete]
-[#terminals]
-=== `terminals`
-+++Terminals interconnected with zero impedance at a this connectivity node.+++
-
-[cols="h,4",width=65%]
-|===
-| URI
-| `cim:ConnectivityNode.Terminals`
-| Cardinality
-| 0..*
-| Type
-| xref::class/Terminal.adoc[`Terminal`]
 
 
 |===

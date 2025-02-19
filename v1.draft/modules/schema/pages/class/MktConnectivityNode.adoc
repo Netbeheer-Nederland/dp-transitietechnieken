@@ -57,15 +57,6 @@ RegisteredResource {
 
 
 
-Terminal {
-  style {
-    fill: "#eccfcb"
-    shadow: true
-  }
-}
-
-
-
 Name {
   style {
     fill: "#eccfcb"
@@ -77,9 +68,6 @@ Name {
 
 
 MktConnectivityNode -> RegisteredResource: registered_resource
-
-
-MktConnectivityNode -> Terminal: terminals
 
 
 MktConnectivityNode -> Name: names
@@ -158,11 +146,6 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 | 0..*
 | xref::class/Name.adoc[`Name`]
 | +++All names of this identified object.+++
-
-| <<terminals,`terminals`>>
-| 0..*
-| xref::class/Terminal.adoc[`Terminal`]
-| +++Terminals interconnected with zero impedance at a this connectivity node.+++
 |===
 
 '''
@@ -242,26 +225,6 @@ For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is map
 | 1..*
 | Type
 | xref::class/RegisteredResource.adoc[`RegisteredResource`]
-
-
-|===
-
-//[discrete]
-[#terminals]
-=== `terminals`
-+++Terminals interconnected with zero impedance at a this connectivity node.+++
-
-[cols="h,4",width=65%]
-|===
-| URI
-| `cim:ConnectivityNode.Terminals`
-| Cardinality
-| 0..*
-| Type
-| xref::class/Terminal.adoc[`Terminal`]
-
-| Inherited from
-| xref::class/ConnectivityNode.adoc[`ConnectivityNode`]
 
 
 |===

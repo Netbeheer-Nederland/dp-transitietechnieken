@@ -105,16 +105,6 @@
                         "array",
                         "null"
                     ]
-                },
-                "terminals": {
-                    "description": "Terminals interconnected with zero impedance at a this connectivity node. ",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
                 }
             },
             "required": [
@@ -427,16 +417,6 @@
                         "type": "string"
                     },
                     "type": "array"
-                },
-                "terminals": {
-                    "description": "Terminals interconnected with zero impedance at a this connectivity node. ",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
                 }
             },
             "required": [
