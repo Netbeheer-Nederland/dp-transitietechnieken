@@ -27,19 +27,19 @@
 |===
 | Value | URI | Description
 
-| `battery`
-| https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/opslaginstallatie[`nbnl:opslaginstallatie`]
-| n/a
-
-| `conversion`
-| https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/verbruiksinstallatie[`nbnl:verbruiksinstallatie`]
-| n/a
-
-| `eVChargingStation`
+| `CHARGING_UNIT`
 | https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/laadinstallatie[`nbnl:laadinstallatie`]
 | n/a
 
-| `pVInstallation`
+| `GENERATING_UNIT`
 | https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/productie-installatie[`nbnl:productie-installatie`]
+| n/a
+
+| `LOAD`
+| `this:ResourceKind.LOAD`
+| n/a
+
+| `STORAGE_UNIT`
+| https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/opslaginstallatie[`nbnl:opslaginstallatie`]
 | n/a
 |===

@@ -716,10 +716,10 @@
         "ResourceKind": {
             "description": "Type of RegisteredResource.",
             "enum": [
-                "pVInstallation",
-                "eVChargingStation",
-                "battery",
-                "conversion"
+                "GENERATING_UNIT",
+                "CHARGING_UNIT",
+                "STORAGE_UNIT",
+                "LOAD"
             ],
             "title": "ResourceKind",
             "type": "string"

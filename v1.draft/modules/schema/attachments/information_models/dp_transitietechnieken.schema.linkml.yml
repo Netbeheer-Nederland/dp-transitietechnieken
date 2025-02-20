@@ -13,7 +13,6 @@ prefixes:
   dcat: http://www.w3.org/ns/dcat#
   dct: http://purl.org/dc/terms/
   github: https://github.com/
-  liander: http://data.liander.nl/markt/def#
   nbnl: https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/
   nl: http://iec.ch/TC57/CIM100-Netherlands#
   owl: http://www.w3.org/2002/07/owl#
@@ -25,14 +24,16 @@ enums:
     description: Type of RegisteredResource.
     enum_uri: this:ResourceKind
     permissible_values:
-      pVInstallation:
+      GENERATING_UNIT:
         meaning: nbnl:productie-installatie
-      eVChargingStation:
+      CHARGING_UNIT:
         meaning: nbnl:laadinstallatie
-      battery:
+      STORAGE_UNIT:
         meaning: nbnl:opslaginstallatie
-      conversion:
-        meaning: nbnl:verbruiksinstallatie
+      LOAD:
+        meaning: this:ResourceKind.LOAD
+        broad_mappings:
+          - nbnl:verbruiksinstallatie
   YesNo:
     description: Used as a flag set to Yes or No.
     from_schema: https://cim.ucaiug.io/ns#TC57CIM
