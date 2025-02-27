@@ -29,10 +29,8 @@ enums:
         meaning: nbnl:laadinstallatie
       STORAGE_UNIT:
         meaning: nbnl:opslaginstallatie
-      LOAD:
-        meaning: this:ResourceKind.LOAD
-        broad_mappings:
-          - nbnl:verbruiksinstallatie
+      LOAD_UNIT:
+        meaning: nbnl:verbruiksinstallatie
   YesNo:
     description: Used as a flag set to Yes or No.
     from_schema: https://cim.ucaiug.io/ns#TC57CIM
