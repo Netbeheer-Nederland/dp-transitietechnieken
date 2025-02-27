@@ -30,7 +30,7 @@ registered_loads:
   - is_aggregated_res: 'NO'
     last_modified: '2025-01-18'
     detection_method_version: '41f4779b-5293-4dfa-9c73-8c9702eaa53f'
-    resource_type: LOAD
+    resource_type: LOAD_UNIT
     resource_capacity:
       - maximum_capacity: 11
         unit_multiplier: k
