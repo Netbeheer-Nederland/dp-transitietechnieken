@@ -719,7 +719,7 @@
                 "GENERATING_UNIT",
                 "CHARGING_UNIT",
                 "STORAGE_UNIT",
-                "LOAD"
+                "LOAD_UNIT"
             ],
             "title": "ResourceKind",
             "type": "string"

@@ -35,8 +35,8 @@
 | https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/productie-installatie[`nbnl:productie-installatie`]
 | n/a
 
-| `LOAD`
-| `this:ResourceKind.LOAD`
+| `LOAD_UNIT`
+| https://begrippen.netbeheernederland.nl/energiesysteembeheer/nl/page/verbruiksinstallatie[`nbnl:verbruiksinstallatie`]
 | n/a
 
 | `STORAGE_UNIT`
